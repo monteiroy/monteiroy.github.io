@@ -3,37 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Página no GitHub Pages</title>
+  <title>Página com Navegação</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #00FFFF;
       margin: 0;
-      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #E0FFFF;
+    }
+
+    nav {
+      background-color: #004080;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px 20px;
       text-align: center;
     }
-    header {
-      background-color: #333;
-      color: pink;
-      padding: 20px 0;
-    }
-    section {
-      margin-top: 30px;
-    }
-    a {
-      color: #00FFFF;
-      text-decoration: none;
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Bem-vindo à minha página, meu nome é Yasmin Monteiro!</h1>
-  </header>
-  <section>
-    <p>Essa é uma página simples hospedada no <strong>GitHub Pages</strong>.</p>
-    <p>Você pode editar este conteúdo no arquivo <code>index.html</code> do seu repositório.</p>
-    <p>Veja mais sobre mim no <a href="https://github.com/seu-usuario" target="_blank">meu GitHub</a>.</p>
-  </section>
+
+  <nav>
+    <div><strong>Meu Site</strong></div>
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Bem-vindo à minha página!</h1>
+    <p>Essa é uma estrutura básica com navegação, conteúdo e rodapé.</p>
+    <p>Você pode personalizar tudo isso para criar seu portfólio, blog ou site pessoal.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Meu Site. Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
+
