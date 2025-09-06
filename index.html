@@ -9,9 +9,8 @@
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, #EEDCFF, #B266FF);
+    background: linear-gradient(135deg, #EEDCFF, #B266FF);
     color: #2E0854;
-    scroll-behavior: smooth;
   }
 
   nav {
@@ -19,50 +18,51 @@
     top: 0;
     width: 100%;
     background: rgba(178,102,255,0.9);
-    display: flex;
-    justify-content: flex-end;
     padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     z-index: 1000;
   }
 
-  nav a {
+  nav button {
+    background: none;
+    border: none;
     color: #fff;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
     transition: 0.3s;
   }
 
-  nav a:hover {
+  nav button:hover {
     color: #FFD700;
   }
 
-  header {
-    padding: 120px 20px 80px;
-    text-align: center;
-  }
-
-  header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
-
-  header p {
-    font-size: 1.2em;
-  }
-
   section {
-    padding: 80px 20px;
-    max-width: 900px;
-    margin: auto;
-    margin-bottom: 40px;
+    display: none;
+    padding: 120px 20px;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  section.active {
+    display: block;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
   }
 
   h2 {
     font-size: 2em;
     color: #8a2be2;
-    text-align: center;
     margin-bottom: 25px;
+  }
+
+  p, li {
+    font-size: 1.1em;
   }
 
   ul {
@@ -72,24 +72,20 @@
 
   ul li {
     margin-bottom: 10px;
-    font-size: 1.1em;
   }
 
-  .projects a, .links a {
+  a {
     color: #2E0854;
-    text-decoration: none;
-    font-weight: 500;
+    text-decoration: underline;
     transition: 0.3s;
   }
 
-  .projects a:hover, .links a:hover {
+  a:hover {
     color: #FFD700;
   }
 
   .contact-icon {
-    display: inline-block;
     margin-right: 8px;
-    vertical-align: middle;
   }
 
   footer {
@@ -103,75 +99,75 @@
 </head>
 <body>
 
-  <nav>
-    <a href="#sobre">Sobre Mim</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#areas">Áreas</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contato">Contato</a>
-  </nav>
+<nav>
+  <button onclick="showSection('inicio')">Início</button>
+  <button onclick="showSection('sobre')">Sobre Mim</button>
+  <button onclick="showSection('habilidades')">Habilidades</button>
+  <button onclick="showSection('areas')">Áreas</button>
+  <button onclick="showSection('projetos')">Projetos</button>
+  <button onclick="showSection('contato')">Contato</button>
+</nav>
 
-  <header>
-    <h1>Yasmin Monteiro</h1>
-    <p>Desenvolvedora Fullstack | Frontend & Backend</p>
-  </header>
+<section id="inicio" class="active">
+  <h1>Olá!</h1>
+  <p>Seja bem-vindo(a) ao meu site!</p>
+</section>
 
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Sou estudante de Sistemas da Informação. Atualmente, estou aprendendo HTML e GitHub. Desejo desenvolver projetos completos, combinando design e funcionalidade.</p>
-  </section>
+<section id="sobre">
+  <h2>Sobre Mim</h2>
+  <p>Sou Yasmin Monteiro, estudante de Sistemas da Informação. Atualmente estou aprendendo HTML e GitHub. Desejo desenvolver projetos completos, combinando design e funcionalidade.</p>
+</section>
 
-  <section id="habilidades">
-    <h2>Habilidades</h2>
-    <ul>
-      <li>Python</li>
-      <li>HTML (em aprendizado)</li>
-      <li>Git & GitHub</li>
-      <li>Desenvolvimento Frontend</li>
-      <li>Design Responsivo e UX/UI</li>
-    </ul>
-  </section>
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <ul>
+    <li>Python</li>
+    <li>HTML (em aprendizado)</li>
+    <li>Git & GitHub</li>
+    <li>Frontend</li>
+    <li>UX/UI Design</li>
+  </ul>
+</section>
 
-  <section id="areas">
-    <h2>Áreas de Atuação</h2>
-    <ul>
-      <li>Frontend</li>
-      <li>Backend</li>
-      <li>Fullstack</li>
-      <li>Projetos Web e APIs</li>
-    </ul>
-  </section>
+<section id="areas">
+  <h2>Áreas de Atuação</h2>
+  <ul>
+    <li>Frontend</li>
+    <li>Backend</li>
+    <li>Fullstack</li>
+    <li>Desenvolvimento Web e APIs</li>
+  </ul>
+</section>
 
-  <section id="projetos">
-    <h2>Projetos</h2>
-    <ul class="projects">
-      <li><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></li>
-      <li><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></li>
-      <li><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></li>
-    </ul>
-  </section>
+<section id="projetos">
+  <h2>Projetos</h2>
+  <ul>
+    <li><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></li>
+    <li><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></li>
+    <li><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></li>
+  </ul>
+</section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <ul class="links">
-      <li>
-        <span class="contact-icon">🔗</span>
-        <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank">LinkedIn</a>
-      </li>
-      <li>
-        <span class="contact-icon">📧</span>
-        <a href="mailto:monteiroy48@gmail.com">Email</a>
-      </li>
-      <li>
-        <span class="contact-icon">💻</span>
-        <a href="https://github.com/monteiroy" target="_blank">GitHub</a>
-      </li>
-    </ul>
-  </section>
+<section id="contato">
+  <h2>Contato</h2>
+  <ul>
+    <li><span class="contact-icon">🔗</span><a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank">LinkedIn</a></li>
+    <li><span class="contact-icon">📧</span><a href="mailto:monteiroy48@gmail.com">Email</a></li>
+    <li><span class="contact-icon">💻</span><a href="https://github.com/monteiroy" target="_blank">GitHub</a></li>
+  </ul>
+</section>
 
-  <footer>
-    &copy; 2025 Yasmin Monteiro. Todos os direitos reservados.
-  </footer>
+<footer>
+  &copy; 2025 Yasmin Monteiro. Todos os direitos reservados.
+</footer>
+
+<script>
+function showSection(id) {
+  const sections = document.querySelectorAll('section');
+  sections.forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>
