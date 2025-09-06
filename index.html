@@ -9,20 +9,24 @@
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #EEDCFF, #B266FF);
-    color: #2E0854;
+    background: linear-gradient(135deg, #CBA3FF, #A066CC);
+    color: #fff;
+    background-image: url('https://i.imgur.com/1Yc6ZpP.png'); /* florzinhas brancas */
+    background-repeat: repeat;
+    background-size: 100px;
   }
 
   nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(178,102,255,0.9);
+    background: rgba(160, 102, 204, 0.95);
     padding: 15px 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
 
   nav button {
@@ -37,6 +41,7 @@
 
   nav button:hover {
     color: #FFD700;
+    transform: scale(1.05);
   }
 
   section {
@@ -57,12 +62,13 @@
 
   h2 {
     font-size: 2em;
-    color: #8a2be2;
+    color: #FFD700;
     margin-bottom: 25px;
   }
 
   p, li {
     font-size: 1.1em;
+    color: #fff;
   }
 
   ul {
@@ -75,13 +81,13 @@
   }
 
   a {
-    color: #2E0854;
+    color: #FFD700;
     text-decoration: underline;
     transition: 0.3s;
   }
 
   a:hover {
-    color: #FFD700;
+    color: #fff;
   }
 
   .contact-icon {
@@ -89,11 +95,12 @@
   }
 
   footer {
-    background: rgba(178,102,255,0.9);
+    background: rgba(160, 102, 204, 0.95);
     text-align: center;
     padding: 20px;
     color: #fff;
     font-size: 0.9em;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
   }
 </style>
 </head>
