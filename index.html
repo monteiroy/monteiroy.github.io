@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #EE82EE; /* Fundo violeta */
-      color: black;
+      background: linear-gradient(180deg, #E6E6FA 0%, #6A0DAD 100%);
+      color: #2E0854;
     }
 
     /* Menu fixo */
@@ -17,14 +17,14 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: black;
+      background-color: #6A0DAD;
       padding: 12px 20px;
       text-align: right;
       z-index: 1000;
     }
 
     nav a {
-      color: #EE82EE;
+      color: #FFFFFF;
       text-decoration: none;
       font-weight: bold;
       margin-left: 20px;
@@ -32,14 +32,16 @@
     }
 
     nav a:hover {
-      color: white;
+      color: #FFD700;
     }
 
     header {
-      background-color: black;
-      color: #EE82EE;
-      padding: 80px 20px 40px; /* espaço extra por causa do menu */
+      background-color: rgba(106, 13, 173, 0.8);
+      color: #FFFFFF;
+      padding: 80px 20px 40px;
       text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
     }
 
     header h1 {
@@ -51,6 +53,13 @@
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.3s;
     }
 
     .perfil {
@@ -60,13 +69,22 @@
     .perfil img {
       width: 150px;
       border-radius: 50%;
-      border: 4px solid black;
+      border: 4px solid #FFFFFF;
       margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    .perfil img:hover {
+      transform: scale(1.1);
     }
 
     h2 {
-      color: black;
+      color: #FFFFFF;
       margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.8em;
     }
 
     ul {
@@ -75,28 +93,28 @@
     }
 
     ul li::before {
-      content: "✔ ";
-      color: black;
+      content: "➤ ";
+      color: #FFFFFF;
       font-weight: bold;
     }
 
-    /* Botões */
     .btn {
-      color: black;
+      color: #2E0854;
       text-decoration: none;
       font-weight: bold;
-      border: 2px solid black;
+      border: 2px solid #2E0854;
       padding: 10px 18px;
       border-radius: 6px;
-      transition: 0.3s;
       margin: 8px;
       display: inline-block;
-      background-color: transparent;
+      background-color: #FFFFFF;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background-color: black;
-      color: #EE82EE;
+      background-color: #2E0854;
+      color: #FFFFFF;
+      transform: scale(1.05);
     }
 
     .buttons {
@@ -105,15 +123,24 @@
     }
 
     footer {
-      background-color: black;
+      background-color: #6A0DAD;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #EE82EE;
+      color: #FFFFFF;
     }
 
     html {
       scroll-behavior: smooth;
+    }
+
+    /* Animações */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -127,20 +154,20 @@
   </nav>
 
   <header id="topo">
-    <h1>Bem-vinda ao meu portfólio!</h1>
-    <p>Frontend | Backend | Fullstack</p>
+    <h1>Bem-vinda ao meu portfólio</h1>
+    <p>Frontend • Backend • Fullstack</p>
   </header>
 
   <section class="perfil">
-    <img src="https://via.placeholder.com/150" alt="Foto de perfil">
+    <img src="yasmin.jpg" alt="Foto de perfil">
     <p>
       Sou <strong>Yasmin Monteiro</strong>, estudante de <strong>Sistemas da Informação</strong> e apaixonada por desenvolvimento de software.  
-      Meu foco é atuar como <strong>Desenvolvedora Fullstack</strong>, unindo <strong>Frontend</strong> e <strong>Backend</strong> para criar soluções completas, funcionais e impactantes.
+      Meu foco é atuar como <strong>Desenvolvedora Fullstack</strong>, unindo <strong>Frontend</strong> e <strong>Backend</strong> para criar soluções completas e elegantes.
     </p>
   </section>
 
   <section>
-    <h2>💼 Habilidades</h2>
+    <h2>🛠 Habilidades</h2>
     <ul>
       <li>Frontend: HTML, CSS, JavaScript, React</li>
       <li>Backend: Python, Java, Node.js</li>
@@ -149,17 +176,17 @@
       <li>Design Responsivo e UX/UI</li>
     </ul>
 
-    <h2>📂 Áreas de Atuação</h2>
-    <p><strong>Frontend:</strong> Interfaces modernas e responsivas, garantindo boa experiência do usuário.</p>
+    <h2>💻 Áreas de Atuação</h2>
+    <p><strong>Frontend:</strong> Interfaces modernas e responsivas para melhor experiência do usuário.</p>
     <p><strong>Backend:</strong> Criação de APIs, integração com bancos de dados e lógica de sistemas.</p>
-    <p><strong>Fullstack:</strong> Desenvolvimento de aplicações completas, unindo interface e funcionalidades.</p>
+    <p><strong>Fullstack:</strong> Desenvolvimento completo, unindo interface e funcionalidades.</p>
 
-    <h2>📁 Projetos</h2>
+    <h2>📂 Projetos</h2>
     <div class="buttons">
-      <a href="https://github.com/seu-usuario" target="_blank" class="btn">💻 Confira meus trabalhos</a>
+      <a href="https://github.com/seu-usuario" target="_blank" class="btn">Confira meus trabalhos</a>
     </div>
 
-    <h2 id="info">📲 Contato</h2>
+    <h2 id="info">✉ Contato</h2>
     <p class="buttons">
       <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="btn">LinkedIn</a>
       <a href="https://github.com/seu-usuario" target="_blank" class="btn">GitHub</a>
