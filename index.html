@@ -7,11 +7,20 @@
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1822/1822899.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    /* ===== Cores principais: lilás e off-white ===== */
+    :root {
+      --lilac-dark: #6b4b8b;
+      --lilac-light: #a88acb;
+      --off-white: #fdfdfd;
+      --text-color: #3e2c5a;
+      --btn-hover: #d8b4ff;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f9f5fc;
-      color: #3e2c5a;
+      background-color: var(--off-white);
+      color: var(--text-color);
       overflow-x: hidden;
     }
 
@@ -19,7 +28,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #6b4b8b;
+      background-color: var(--lilac-dark);
       padding: 15px 0;
       display: flex;
       justify-content: center;
@@ -28,7 +37,7 @@
     }
 
     nav a {
-      color: #fff;
+      color: var(--off-white);
       text-decoration: none;
       font-weight: 600;
       margin: 0 25px;
@@ -36,49 +45,44 @@
     }
 
     nav a:hover {
-      color: #f9a1d4;
+      color: var(--btn-hover);
     }
 
     header {
       position: relative;
       padding: 140px 20px 60px;
       text-align: center;
-      color: #fff;
-      background: linear-gradient(135deg, #6b4b8b, #a88acb);
+      background: linear-gradient(135deg, var(--lilac-dark), var(--lilac-light));
+      color: var(--off-white);
       overflow: hidden;
     }
 
     header h1 {
       font-size: 3em;
       margin: 0;
-      color: #fdf1fb;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-      position: relative;
-      z-index: 2;
     }
 
     header p {
       font-size: 1.2em;
       margin-top: 12px;
-      color: #e0c3fc;
-      position: relative;
-      z-index: 2;
+      color: var(--off-white);
     }
 
-    /* Partículas delicadas animadas */
+    /* Partículas animadas */
     .particle {
       position: absolute;
       border-radius: 50%;
-      background: rgba(249,161,212,0.3);
+      background: rgba(255, 255, 255, 0.3);
       width: 10px;
       height: 10px;
       animation: float 10s infinite;
     }
 
-    .particle:nth-child(2) { background: rgba(168,138,203,0.3); width:12px; height:12px; animation-duration:12s;}
-    .particle:nth-child(3) { background: rgba(239,220,250,0.3); width:8px; height:8px; animation-duration:14s;}
-    .particle:nth-child(4) { background: rgba(249,161,212,0.2); width:6px; height:6px; animation-duration:16s;}
-    .particle:nth-child(5) { background: rgba(168,138,203,0.2); width:14px; height:14px; animation-duration:18s;}
+    .particle:nth-child(2) { width: 12px; height: 12px; animation-duration:12s; }
+    .particle:nth-child(3) { width: 8px; height: 8px; animation-duration:14s; }
+    .particle:nth-child(4) { width: 6px; height: 6px; animation-duration:16s; }
+    .particle:nth-child(5) { width: 14px; height: 14px; animation-duration:18s; }
 
     @keyframes float {
       0% { transform: translate(0,0) scale(1);}
@@ -98,31 +102,31 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #6b4b8b;
-      border-left: 4px solid #f9a1d4;
+      color: var(--lilac-dark);
+      border-left: 4px solid var(--lilac-light);
       padding-left: 10px;
     }
 
     .card {
-      background-color: #fff;
+      background-color: var(--off-white);
       border-radius: 14px;
       padding: 25px;
       margin-top: 25px;
-      box-shadow: 0 4px 12px rgba(155, 89, 182, 0.1);
+      box-shadow: 0 4px 12px rgba(107, 75, 139, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
-      border-left: 4px solid #f9a1d4;
+      border-left: 4px solid var(--lilac-light);
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(155, 89, 182, 0.2);
+      box-shadow: 0 8px 20px rgba(107, 75, 139, 0.2);
     }
 
-    .card h3 { margin-top: 0; color: #3e2c5a; }
+    .card h3 { margin-top: 0; color: var(--lilac-dark); }
 
     .btn {
-      background-color: #f9a1d4;
-      color: #fff;
+      background-color: var(--lilac-light);
+      color: var(--off-white);
       padding: 10px 18px;
       border: none;
       border-radius: 8px;
@@ -130,19 +134,19 @@
       text-decoration: none;
       transition: 0.3s;
       display: inline-block;
-      box-shadow: 0 2px 6px rgba(155, 89, 182, 0.2);
+      box-shadow: 0 2px 6px rgba(107, 75, 139, 0.2);
     }
 
     .btn:hover {
-      background-color: #e06bb5;
+      background-color: var(--btn-hover);
       transform: scale(1.05);
     }
 
     footer {
-      background-color: #6b4b8b;
+      background-color: var(--lilac-dark);
       text-align: center;
       padding: 25px;
-      color: #fff;
+      color: var(--off-white);
       font-size: 0.9em;
       margin-top: 40px;
     }
@@ -153,7 +157,7 @@
       text-align: center;
       font-style: italic;
       margin-top: 40px;
-      color: #7f5ca0;
+      color: var(--lilac-dark);
     }
 
     @media (max-width: 600px) {
@@ -173,6 +177,7 @@
   <header>
     <h1>Yasmin Monteiro Barreto</h1>
     <p><strong>Front-End | Fullstack | Back-End</strong></p>
+    <!-- Partículas -->
     <div class="particle" style="top:20px; left:50px;"></div>
     <div class="particle" style="top:60px; left:200px;"></div>
     <div class="particle" style="top:40px; left:350px;"></div>
@@ -228,7 +233,7 @@
       <a href="https://github.com/monteiroy/obi-programas-python/blob/main/Camisetas%20da%20Olimp%C3%ADada" target="_blank" class="btn">Ver Código</a>
     </div>
 
-    <p style="text-align: center; font-size: 0.9em; color: #7f5ca0; margin-top: 30px;">
+    <p style="text-align: center; font-size: 0.9em; color: var(--lilac-dark); margin-top: 30px;">
       ⚠️ Programas simples desenvolvidos em Python através da OBI — Olimpíada Brasileira de Informática.
     </p>
   </section>
@@ -236,14 +241,4 @@
   <section id="contato">
     <h2><span class="icon">📬</span> Contatos</h2>
     <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank" class="btn">LinkedIn</a>
-    <a href="mailto:monteiroy48@gmail.com" class="btn">Email</a>
-    <a href="https://github.com/monteiroy" target="_blank" class="btn">GitHub</a>
-  </section>
-
-  <p class="evolucao">🌱 Programadora em formação.</p>
-
-  <footer>
-    &copy; 2025 Yasmin Monteiro Barreto. Todos os direitos reservados.
-  </footer>
-</body>
-</html>
+    <a href="mailto:monteiroy48@gmail.com
