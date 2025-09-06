@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(180deg, #F3E8FF 0%, #CDA0FF 100%);
+      background: linear-gradient(180deg, #EDE0FF 0%, #CDA0FF 100%);
       color: #2E0854;
     }
 
@@ -37,9 +37,9 @@
     }
 
     header {
-      background-color: rgba(178, 102, 255, 0.8);
+      background-color: rgba(178, 102, 255, 0.9);
       color: #FFFFFF;
-      padding: 80px 20px 40px;
+      padding: 100px 20px 60px;
       text-align: center;
       opacity: 0;
       animation: fadeIn 1s forwards;
@@ -47,16 +47,21 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 3em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
       border-radius: 12px;
       background-color: rgba(255, 255, 255, 0.15);
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       opacity: 0;
       transform: translateY(20px);
       animation: fadeInUp 1s forwards;
@@ -64,23 +69,44 @@
     }
 
     h2 {
-      color: #FFFFFF;
-      margin-top: 40px;
+      color: #2E0854;
+      margin-bottom: 20px;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    .cards {
       display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.8em;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .card {
+      background-color: #FFFFFF;
+      color: #2E0854;
+      padding: 20px;
+      border-radius: 12px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
     }
 
-    ul li::before {
-      content: "➤ ";
-      color: #FFFFFF;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #2E0854;
       font-weight: bold;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
     }
 
     .btn {
@@ -102,11 +128,6 @@
       transform: scale(1.05);
     }
 
-    .buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
-
     footer {
       background-color: #B266FF;
       text-align: center;
@@ -119,7 +140,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Animações */
     @keyframes fadeIn {
       to { opacity: 1; }
     }
@@ -134,66 +154,66 @@
   <!-- Menu fixo -->
   <nav>
     <a href="#topo">Início</a>
-    <a href="#info">Mais Informações</a>
+    <a href="#sobre">Mais Informações</a>
   </nav>
 
+  <!-- Hero / Topo -->
   <header id="topo">
-    <h1>Bem-vinda ao meu portfólio</h1>
-    <p>Frontend • Backend • Fullstack</p>
+    <h1>Yasmin Monteiro</h1>
+    <p>Desenvolvedora Fullstack | Frontend & Backend</p>
+    <div class="buttons">
+      <a href="#sobre" class="btn">Saiba mais</a>
+      <a href="#projetos" class="btn">Meus projetos</a>
+    </div>
   </header>
 
   <!-- Sobre Mim -->
-  <section>
-    <h2>👩‍💻 Sobre Mim</h2>
-    <p>Sou <strong>Yasmin Monteiro</strong>, estudante de <strong>Sistemas da Informação</strong>, com paixão por desenvolvimento web e soluções digitais.  
-    Busco unir <strong>Frontend</strong> e <strong>Backend</strong> para criar projetos completos, funcionais e visualmente elegantes.</p>
-  </section>
-
-  <!-- Formação -->
-  <section>
-    <h2>🎓 Formação</h2>
-    <ul>
-      <li>Técnico em Administração</li>
-      <li>Graduação em Sistemas da Informação (em andamento)</li>
-    </ul>
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou <strong>Yasmin Monteiro</strong>, estudante de <strong>Sistemas da Informação</strong>, apaixonada por desenvolvimento web e soluções digitais.  
+    Busco criar projetos completos, combinando <strong>Frontend</strong> e <strong>Backend</strong> para interfaces modernas e funcionais.</p>
   </section>
 
   <!-- Habilidades -->
   <section>
-    <h2>🛠 Habilidades</h2>
-    <ul>
-      <li>Frontend: HTML, CSS, JavaScript, React</li>
-      <li>Backend: Python, Java, Node.js</li>
-      <li>Bancos de Dados: MySQL, PostgreSQL, MongoDB</li>
-      <li>Git, GitHub, APIs REST</li>
-      <li>Design Responsivo e UX/UI</li>
-    </ul>
+    <h2>Habilidades</h2>
+    <div class="cards">
+      <div class="card">HTML, CSS, JavaScript</div>
+      <div class="card">React</div>
+      <div class="card">Node.js, Python</div>
+      <div class="card">Git & GitHub</div>
+      <div class="card">APIs REST</div>
+      <div class="card">UX/UI Design</div>
+    </div>
   </section>
 
   <!-- Áreas de Atuação -->
   <section>
-    <h2>💻 Áreas de Atuação</h2>
-    <p><strong>Frontend:</strong> Desenvolvimento de interfaces modernas e responsivas, garantindo ótima experiência do usuário.</p>
-    <p><strong>Backend:</strong> Criação de APIs, lógica de sistemas e integração com bancos de dados.</p>
-    <p><strong>Fullstack:</strong> Desenvolvimento completo, unindo interface, lógica e funcionalidades do projeto.</p>
+    <h2>Áreas de Atuação</h2>
+    <div class="cards">
+      <div class="card"><strong>Frontend:</strong><br>Interfaces modernas e responsivas.</div>
+      <div class="card"><strong>Backend:</strong><br>APIs, lógica e banco de dados.</div>
+      <div class="card"><strong>Fullstack:</strong><br>Desenvolvimento completo e integrado.</div>
+    </div>
   </section>
 
   <!-- Projetos -->
-  <section>
-    <h2>📂 Projetos</h2>
-    <p>Confira alguns dos meus trabalhos disponíveis no GitHub:</p>
-    <div class="buttons">
-      <a href="https://github.com/seu-usuario" target="_blank" class="btn">Ver meus projetos</a>
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="cards">
+      <div class="card"><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></div>
+      <div class="card"><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></div>
+      <div class="card"><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></div>
     </div>
   </section>
 
   <!-- Contato -->
   <section id="info">
-    <h2>✉ Contato</h2>
+    <h2>Contato</h2>
     <div class="buttons">
-      <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="btn">LinkedIn</a>
-      <a href="https://github.com/seu-usuario" target="_blank" class="btn">GitHub</a>
-      <a href="mailto:seuemail@email.com" class="btn">Email</a>
+      <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank" class="btn">LinkedIn</a>
+      <a href="https://github.com/monteiroy" target="_blank" class="btn">GitHub</a>
+      <a href="mailto:monteiroy48@gmail.com" class="btn">Email</a>
     </div>
   </section>
 
