@@ -8,14 +8,37 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #E6E6FA; /* Cor do corpo */
-      color: black; /* Letras pretas */
+      background-color: #EE82EE; /* Fundo violeta */
+      color: black;
+    }
+
+    /* Menu fixo */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: black;
+      padding: 12px 20px;
+      text-align: right;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #EE82EE;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: white;
     }
 
     header {
-      background-color: black; 
-      color: #E6E6FA; 
-      padding: 40px 20px;
+      background-color: black;
+      color: #EE82EE;
+      padding: 80px 20px 40px; /* espaço extra por causa do menu */
       text-align: center;
     }
 
@@ -57,19 +80,28 @@
       font-weight: bold;
     }
 
-    a {
+    /* Botões */
+    .btn {
       color: black;
       text-decoration: none;
       font-weight: bold;
       border: 2px solid black;
-      padding: 6px 12px;
+      padding: 10px 18px;
       border-radius: 6px;
       transition: 0.3s;
+      margin: 8px;
+      display: inline-block;
+      background-color: transparent;
     }
 
-    a:hover {
+    .btn:hover {
       background-color: black;
-      color: #E6E6FA;
+      color: #EE82EE;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
     }
 
     footer {
@@ -77,13 +109,24 @@
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #E6E6FA;
+      color: #EE82EE;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <!-- Menu fixo -->
+  <nav>
+    <a href="#topo">Início</a>
+    <a href="#info">Mais Informações</a>
+    <a href="https://github.com/seu-usuario" target="_blank">Meus Trabalhos</a>
+  </nav>
+
+  <header id="topo">
     <h1>Bem-vinda ao meu portfólio!</h1>
     <p>Frontend | Backend | Fullstack</p>
   </header>
@@ -112,13 +155,15 @@
     <p><strong>Fullstack:</strong> Desenvolvimento de aplicações completas, unindo interface e funcionalidades.</p>
 
     <h2>📁 Projetos</h2>
-    <p>Confira meus trabalhos no <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>.</p>
+    <div class="buttons">
+      <a href="https://github.com/seu-usuario" target="_blank" class="btn">💻 Confira meus trabalhos</a>
+    </div>
 
-    <h2>📲 Contato</h2>
-    <p>
-      <a href="https://www.linkedin.com/in/seu-usuario" target="_blank">LinkedIn</a>
-      <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
-      <a href="mailto:seuemail@email.com">Email</a>
+    <h2 id="info">📲 Contato</h2>
+    <p class="buttons">
+      <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="btn">LinkedIn</a>
+      <a href="https://github.com/seu-usuario" target="_blank" class="btn">GitHub</a>
+      <a href="mailto:seuemail@email.com" class="btn">Email</a>
     </p>
   </section>
 
