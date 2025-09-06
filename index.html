@@ -2,210 +2,179 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yasmin Monteiro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yasmin Monteiro • Projetos em Python</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1822/1822899.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --cor-fundo: #fdfdfd;
-      --cor-lilas-claro: #d9c9f0;
-      --cor-lilas-escuro: #7a4fc2;
-      --cor-texto: #333;
-    }
-
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #FDF6FF 0%, #EAE2F8 100%);
+      color: #3E2C5A;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #CBB4E3;
+      padding: 12px 20px;
+      text-align: right;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFD700;
     }
 
     header {
-      background-color: var(--cor-lilas-claro);
-      padding: 60px 20px;
+      padding: 100px 20px 40px;
       text-align: center;
-      border-bottom: 4px solid var(--cor-lilas-escuro);
+      background-color: rgba(203, 180, 227, 0.8);
     }
 
     header h1 {
       font-size: 2.8em;
-      margin-bottom: 10px;
-      color: var(--cor-lilas-escuro);
+      margin: 0;
     }
 
     header p {
       font-size: 1.2em;
-    }
-
-    nav {
-      background-color: var(--cor-lilas-escuro);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav button {
-      background-color: white;
-      border: none;
-      color: var(--cor-lilas-escuro);
-      font-weight: 600;
-      padding: 10px 18px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    nav button:hover {
-      background-color: var(--cor-lilas-claro);
+      margin-top: 10px;
     }
 
     section {
-      display: none;
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
 
-    section.active {
-      display: block;
-    }
-
     h2 {
-      color: var(--cor-lilas-escuro);
-      margin-bottom: 15px;
       font-size: 1.8em;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    a {
-      color: var(--cor-lilas-escuro);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: var(--cor-lilas-escuro);
-      color: white;
-      text-align: center;
-      padding: 20px;
       margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #5A3E7A;
     }
 
     .card {
       background-color: #fff;
-      border: 1px solid #eee;
-      border-left: 5px solid var(--cor-lilas-claro);
+      border-radius: 10px;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #3E2C5A;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      background-color: #CBB4E3;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #A88ACB;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #CBB4E3;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      font-size: 0.9em;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .icon {
+      font-size: 1.4em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.4em;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Bem-vindo(a)!</h1>
-  <p>Este é o portfólio profissional de Yasmin Monteiro</p>
-</header>
+  <nav>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-<nav>
-  <button onclick="showSection('inicio')">Início</button>
-  <button onclick="showSection('sobre')">Sobre Mim</button>
-  <button onclick="showSection('formacao')">Formação</button>
-  <button onclick="showSection('habilidades')">Habilidades</button>
-  <button onclick="showSection('area')">Área de Interesse</button>
-  <button onclick="showSection('projetos')">Projetos</button>
-  <button onclick="showSection('contato')">Contato</button>
-</nav>
+  <header>
+    <h1>Yasmin Monteiro</h1>
+    <p>Desenvolvedora de Sistemas • Projetos em Python</p>
+  </header>
 
-<section id="inicio" class="active">
-  <div class="card">
-    <h2>Saudação</h2>
-    <p>Olá! Seja muito bem-vindo(a) ao meu site. Aqui você encontrará informações sobre minha trajetória, meus projetos e meus objetivos como futura desenvolvedora Fullstack.</p>
-  </div>
-</section>
+  <section id="projetos">
+    <h2><span class="icon">🐍</span> Projetos em Python</h2>
 
-<section id="sobre">
-  <div class="card">
-    <h2>Sobre Mim</h2>
-    <p>Meu nome é <strong>Yasmin Monteiro</strong>. Sou estudante de Sistemas da Informação e apaixonada por tecnologia. Meu objetivo é crescer como desenvolvedora Fullstack, criando soluções completas e funcionais que impactem positivamente a vida das pessoas.</p>
-  </div>
-</section>
+    <div class="card">
+      <h3>Gerador de Senhas</h3>
+      <p>Aplicação em Python que gera senhas seguras com diferentes níveis de complexidade.</p>
+      <p><strong>Tecnologias:</strong> Python, Tkinter</p>
+      <a href="https://github.com/monteiroy/gerador-senhas" target="_blank" class="btn">Ver no GitHub</a>
+    </div>
 
-<section id="formacao">
-  <div class="card">
-    <h2>Formação</h2>
-    <ul>
-      <li>Técnica em Administração pela ETEC de Hortolândia</li>
-      <li>Graduanda em Sistemas da Informação pela UNASP Hortolândia</li>
-    </ul>
-  </div>
-</section>
+    <div class="card">
+      <h3>Organizador de Arquivos</h3>
+      <p>Script que organiza arquivos em pastas automaticamente com base na extensão.</p>
+      <p><strong>Tecnologias:</strong> Python, OS, Shutil</p>
+      <a href="https://github.com/monteiroy/organizador-arquivos" target="_blank" class="btn">Ver no GitHub</a>
+    </div>
 
-<section id="habilidades">
-  <div class="card">
-    <h2>Habilidades</h2>
-    <ul>
-      <li>Python</li>
-      <li>HTML</li>
-      <li>Git & GitHub</li>
-      <li>UX/UI Design</li>
-      <li>Organização e trabalho em equipe</li>
-    </ul>
-  </div>
-</section>
+    <div class="card">
+      <h3>Conversor de Moedas</h3>
+      <p>Programa que consome API de câmbio e converte valores entre moedas.</p>
+      <p><strong>Tecnologias:</strong> Python, Requests, JSON</p>
+      <a href="https://github.com/monteiroy/conversor-moedas" target="_blank" class="btn">Ver no GitHub</a>
+    </div>
+  </section>
 
-<section id="area">
-  <div class="card">
-    <h2>Área de Interesse</h2>
-    <p>Tenho interesse em atuar como <strong>desenvolvedora Fullstack</strong>, trabalhando tanto no frontend quanto no backend. Busco criar aplicações modernas, acessíveis e com ótima experiência para o usuário.</p>
-  </div>
-</section>
+  <section id="contato">
+    <h2><span class="icon">📬</span> Contato</h2>
+    <p>Quer conversar sobre tecnologia ou conhecer mais dos meus projetos? Me chama!</p>
+    <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank" class="btn">LinkedIn</a>
+    <a href="mailto:monteiroy48@gmail.com" class="btn">Email</a>
+    <a href="https://github.com/monteiroy" target="_blank" class="btn">GitHub</a>
+  </section>
 
-<section id="projetos">
-  <div class="card">
-    <h2>Projetos</h2>
-    <ul>
-      <li><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></li>
-      <li><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></li>
-      <li><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></li>
-    </ul>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="card">
-    <h2>Contato</h2>
-    <p>Email: <a href="mailto:monteiroy48@gmail.com">monteiroy48@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank">Perfil</a></p>
-    <p>GitHub: <a href="https://github.com/monteiroy" target="_blank">Repositórios</a></p>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 Yasmin Monteiro. Todos os direitos reservados.
-</footer>
-
-<script>
-  function showSection(id) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(sec => sec.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
+  <footer>
+    &copy; 2025 Yasmin Monteiro. Todos os direitos reservados.
+  </footer>
 
 </body>
 </html>
