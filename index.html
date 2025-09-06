@@ -4,38 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yasmin Monteiro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f0fa;
+      color: #4b0082;
     }
 
     header {
-      background-color: #6200ea;
-      color: white;
-      padding: 20px;
+      background-color: #d8b9f2;
+      padding: 60px 20px;
       text-align: center;
     }
 
-    main {
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    nav {
+      background-color: #b084d6;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav button {
+      background-color: white;
+      border: none;
+      color: #4b0082;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #d8b9f2;
+    }
+
+    section {
+      display: none;
       padding: 40px 20px;
       max-width: 800px;
       margin: auto;
     }
 
-    section {
-      margin-bottom: 40px;
+    section.active {
+      display: block;
     }
 
     h2 {
-      color: #6200ea;
-      margin-bottom: 10px;
+      color: #4b0082;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     a {
-      color: #6200ea;
+      color: #4b0082;
       text-decoration: none;
     }
 
@@ -44,47 +85,93 @@
     }
 
     footer {
-      background-color: #6200ea;
+      background-color: #b084d6;
       color: white;
       text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Yasmin Monteiro</h1>
-  <p>Estudante de Sistemas da Informação</p>
+  <h1>Bem-vindo!</h1>
+  <p>Este é o portfólio profissional de Yasmin Monteiro</p>
 </header>
 
-<main>
-  <section>
-    <h2>Sobre Mim</h2>
-    <p>Olá! Sou Yasmin Monteiro, apaixonada por tecnologia e desenvolvimento web.</p>
-  </section>
+<nav>
+  <button onclick="showSection('inicio')">Início</button>
+  <button onclick="showSection('sobre')">Sobre Mim</button>
+  <button onclick="showSection('formacao')">Formação</button>
+  <button onclick="showSection('habilidades')">Habilidades</button>
+  <button onclick="showSection('area')">Área de Interesse</button>
+  <button onclick="showSection('projetos')">Projetos</button>
+  <button onclick="showSection('contato')">Contato</button>
+</nav>
 
-  <section>
-    <h2>Projetos</h2>
-    <ul>
-      <li><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></li>
-      <li><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></li>
-      <li><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></li>
-    </ul>
-  </section>
+<section id="inicio" class="active">
+  <h2>Início</h2>
+  <p>Olá! Sou Yasmin Monteiro, estudante de Sistemas da Informação, apaixonada por tecnologia e desenvolvimento web. Este site foi criado para apresentar meu perfil profissional, meus projetos e minha trajetória na área de TI.</p>
+</section>
 
-  <section>
-    <h2>Contato</h2>
-    <p>Email: <a href="mailto:monteiroy48@gmail.com">monteiroy48@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank">Perfil</a></p>
-    <p>GitHub: <a href="https://github.com/monteiroy" target="_blank">Repositórios</a></p>
-  </section>
-</main>
+<section id="sobre">
+  <h2>Sobre Mim</h2>
+  <p>Sou dedicada, curiosa e determinada a crescer como desenvolvedora. Tenho interesse em criar soluções que unam design, funcionalidade e acessibilidade. Estou sempre buscando aprender mais e evoluir como profissional.</p>
+</section>
+
+<section id="formacao">
+  <h2>Formação</h2>
+  <ul>
+    <li>Graduação em Sistemas da Informação (em andamento)</li>
+    <li>Cursos complementares: HTML, CSS, Git, GitHub</li>
+  </ul>
+</section>
+
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <ul>
+    <li>HTML e CSS</li>
+    <li>Git & GitHub</li>
+    <li>Python</li>
+    <li>UX/UI Design</li>
+    <li>Organização e trabalho em equipe</li>
+  </ul>
+</section>
+
+<section id="area">
+  <h2>Área de Interesse</h2>
+  <p>Quero seguir carreira como desenvolvedora <strong>Fullstack</strong>, atuando tanto no frontend quanto no backend. Meu objetivo é criar aplicações completas, funcionais e com ótima experiência para o usuário.</p>
+</section>
+
+<section id="projetos">
+  <h2>Projetos</h2>
+  <ul>
+    <li><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></li>
+    <li><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></li>
+    <li><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></li>
+  </ul>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Email: <a href="mailto:monteiroy48@gmail.com">monteiroy48@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank">Perfil</a></p>
+  <p>GitHub: <a href="https://github.com/monteiroy" target="_blank">Repositórios</a></p>
+</section>
 
 <footer>
-  &copy; 2025 Yasmin Monteiro
+  &copy; 2025 Yasmin Monteiro. Todos os direitos reservados.
 </footer>
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 
 </body>
 </html>
