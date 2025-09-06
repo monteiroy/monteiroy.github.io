@@ -7,119 +7,99 @@
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1822/1822899.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    /* Paleta de cores profissional: azul escuro, cinza suave, roxo escuro */
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #FDF6FF 0%, #EAE2F8 100%);
-      color: #3E2C5A;
-      position: relative;
-      overflow-x: hidden;
+      background-color: #f5f6fa;
+      color: #2c3e50;
     }
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #CBB4E3;
-      padding: 12px 0;
+      background-color: #34495e;
+      padding: 15px 0;
       display: flex;
       justify-content: center;
       z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     nav a {
-      color: #fff;
+      color: #ecf0f1;
       text-decoration: none;
       font-weight: 600;
-      margin: 0 20px;
+      margin: 0 25px;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #FFD700;
+      color: #1abc9c;
     }
 
-    /* Fundo animado tipo ondinhas */
     header {
-      padding: 120px 20px 60px;
+      padding: 140px 20px 60px;
       text-align: center;
-      color: white;
-      background: linear-gradient(-45deg, #b799ff, #a07be0, #cbb4e3, #e0c3fc);
-      background-size: 300% 300%;
-      animation: waves 10s ease infinite;
+      color: #fff;
+      background: linear-gradient(135deg, #2c3e50, #4b6584);
       position: relative;
       overflow: hidden;
-    }
-
-    @keyframes waves {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     header h1 {
       font-size: 3em;
       margin: 0;
-      animation: fadeInDown 1.5s ease;
-      color: #2A0A3D; /* Roxo escuro */
-      text-shadow: 2px 2px 6px rgba(255,255,255,0.5);
+      color: #ecf0f1; /* Nome destacado e profissional */
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
     }
 
     header p {
       font-size: 1.2em;
-      margin-top: 15px;
-      color: #fff;
+      margin-top: 12px;
+      color: #bdc3c7;
     }
 
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1s ease forwards;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     h2 {
-      font-size: 1.8em;
+      font-size: 1.9em;
       margin-top: 40px;
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #5A3E7A;
+      color: #2c3e50;
+      border-left: 4px solid #1abc9c;
+      padding-left: 10px;
     }
 
     .card {
       background-color: #fff;
-      border-radius: 16px;
-      padding: 22px;
-      margin-top: 20px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 25px;
+      margin-top: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       transition: transform 0.3s, box-shadow 0.3s;
-      border: 2px solid #EAE2F8;
-      position: relative;
+      border-left: 4px solid #1abc9c;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 16px rgba(90, 62, 122, 0.25);
-      border-color: #CBB4E3;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
     .card h3 {
       margin-top: 0;
-      color: #3E2C5A;
+      color: #2c3e50;
     }
 
     .btn {
-      background-color: #CBB4E3;
+      background-color: #1abc9c;
       color: #fff;
       padding: 10px 18px;
       border: none;
@@ -127,21 +107,22 @@
       font-weight: 600;
       text-decoration: none;
       transition: 0.3s;
-      box-shadow: 0 0 6px rgba(160, 123, 224, 0.5);
       display: inline-block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .btn:hover {
-      background-color: #A88ACB;
+      background-color: #16a085;
       transform: scale(1.05);
     }
 
     footer {
-      background-color: #CBB4E3;
+      background-color: #34495e;
       text-align: center;
-      padding: 20px;
-      color: #fff;
+      padding: 25px;
+      color: #ecf0f1;
       font-size: 0.9em;
+      margin-top: 40px;
     }
 
     html {
@@ -156,7 +137,7 @@
       text-align: center;
       font-style: italic;
       margin-top: 40px;
-      color: #6B4B8B;
+      color: #7f8c8d;
     }
 
     @media (max-width: 600px) {
@@ -164,45 +145,8 @@
         font-size: 2em;
       }
       h2 {
-        font-size: 1.4em;
+        font-size: 1.5em;
       }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Detalhes decorativos no fundo */
-    .decoracao {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.15;
-      background: #CBB4E3;
-      animation: flutuar 10s infinite ease-in-out alternate;
-      z-index: 0;
-    }
-
-    .decor1 {
-      width: 120px; height: 120px;
-      top: 200px; left: -40px;
-    }
-
-    .decor2 {
-      width: 80px; height: 80px;
-      bottom: 150px; right: -30px;
-      background: #A88ACB;
-    }
-
-    .decor3 {
-      width: 60px; height: 60px;
-      bottom: 50px; left: 20px;
-      background: #E0C3FC;
-    }
-
-    @keyframes flutuar {
-      from { transform: translateY(0); }
-      to { transform: translateY(-30px); }
     }
   </style>
 </head>
@@ -218,10 +162,6 @@
     <h1>Yasmin Monteiro Barreto</h1>
     <p><strong>Front-End | Fullstack | Back-End</strong></p>
   </header>
-
-  <div class="decoracao decor1"></div>
-  <div class="decoracao decor2"></div>
-  <div class="decoracao decor3"></div>
 
   <section id="sobre">
     <h2><span class="icon">🧚🏽‍♀️</span> Sobre Mim:</h2>
@@ -271,7 +211,7 @@
       <a href="https://github.com/monteiroy/obi-programas-python/blob/main/Camisetas%20da%20Olimp%C3%ADada" target="_blank" class="btn">Ver Código</a>
     </div>
 
-    <p style="text-align: center; font-size: 0.9em; color: #5A3E7A; margin-top: 30px;">
+    <p style="text-align: center; font-size: 0.9em; color: #7f8c8d; margin-top: 30px;">
       ⚠️ Programas simples desenvolvidos em Python através da OBI — Olimpíada Brasileira de Informática.
     </p>
   </section>
