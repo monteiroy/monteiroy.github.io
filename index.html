@@ -36,6 +36,7 @@
       color: #FFD700;
     }
 
+    /* Hero section */
     header {
       background-color: rgba(178, 102, 255, 0.9);
       color: #FFFFFF;
@@ -55,6 +56,29 @@
       margin-top: 10px;
     }
 
+    header .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      color: #2E0854;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #2E0854;
+      padding: 10px 18px;
+      border-radius: 6px;
+      margin: 8px;
+      display: inline-block;
+      background-color: #FFFFFF;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2E0854;
+      color: #FFFFFF;
+      transform: scale(1.05);
+    }
+
     section {
       padding: 60px 20px;
       max-width: 1000px;
@@ -70,7 +94,7 @@
 
     h2 {
       color: #2E0854;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       font-size: 2em;
       text-align: center;
     }
@@ -104,30 +128,6 @@
       font-weight: bold;
     }
 
-    .buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .btn {
-      color: #2E0854;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #2E0854;
-      padding: 10px 18px;
-      border-radius: 6px;
-      margin: 8px;
-      display: inline-block;
-      background-color: #FFFFFF;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #2E0854;
-      color: #FFFFFF;
-      transform: scale(1.05);
-    }
-
     footer {
       background-color: #B266FF;
       text-align: center;
@@ -140,6 +140,7 @@
       scroll-behavior: smooth;
     }
 
+    /* Animações */
     @keyframes fadeIn {
       to { opacity: 1; }
     }
@@ -157,7 +158,7 @@
     <a href="#sobre">Mais Informações</a>
   </nav>
 
-  <!-- Hero / Topo -->
+  <!-- Hero section -->
   <header id="topo">
     <h1>Yasmin Monteiro</h1>
     <p>Desenvolvedora Fullstack | Frontend & Backend</p>
@@ -170,8 +171,7 @@
   <!-- Sobre Mim -->
   <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Sou <strong>Yasmin Monteiro</strong>, estudante de <strong>Sistemas da Informação</strong>, apaixonada por desenvolvimento web e soluções digitais.  
-    Busco criar projetos completos, combinando <strong>Frontend</strong> e <strong>Backend</strong> para interfaces modernas e funcionais.</p>
+    <p>Sou <strong>Yasmin Monteiro</strong>, estudante de <strong>Sistemas da Informação</strong>, apaixonada por desenvolvimento web e soluções digitais. Busco criar projetos completos, combinando <strong>Frontend</strong> e <strong>Backend</strong> para interfaces modernas e funcionais.</p>
   </section>
 
   <!-- Habilidades -->
@@ -191,9 +191,9 @@
   <section>
     <h2>Áreas de Atuação</h2>
     <div class="cards">
-      <div class="card"><strong>Frontend:</strong><br>Interfaces modernas e responsivas.</div>
-      <div class="card"><strong>Backend:</strong><br>APIs, lógica e banco de dados.</div>
-      <div class="card"><strong>Fullstack:</strong><br>Desenvolvimento completo e integrado.</div>
+      <div class="card"><strong>Frontend</strong><br>Interfaces modernas e responsivas.</div>
+      <div class="card"><strong>Backend</strong><br>APIs, lógica e banco de dados.</div>
+      <div class="card"><strong>Fullstack</strong><br>Desenvolvimento completo e integrado.</div>
     </div>
   </section>
 
