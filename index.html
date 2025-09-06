@@ -1,218 +1,100 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yasmin Monteiro Barreto</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1822/1822899.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #FDF6FF 0%, #EAE2F8 100%);
-      color: #3E2C5A;
-    }
+/* Fundo animado lilás no topo */
+header {
+  padding: 120px 20px 60px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(-45deg, #b799ff, #a07be0, #cbb4e3, #e0c3fc);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #CBB4E3;
-      padding: 12px 0;
-      display: flex;
-      justify-content: center;
-      z-index: 1000;
-    }
+/* Animação do fundo */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 20px;
-      transition: 0.3s;
-    }
+/* Nome grande com efeito de brilho */
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6),
+               0 0 20px rgba(255,255,255,0.3);
+  animation: fadeInDown 1.5s ease;
+}
 
-    nav a:hover {
-      color: #FFD700;
-    }
+/* Subtítulo com efeito de digitação */
+header p {
+  font-size: 1.3em;
+  margin-top: 15px;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards, blink 0.8s infinite;
+}
 
-    header {
-      padding: 100px 20px 40px;
-      text-align: center;
-      background-color: rgba(203, 180, 227, 0.8);
-    }
+/* Digitação */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
 
-    header h1 {
-      font-size: 2.8em;
-      margin: 0;
-    }
+/* Cards com efeito de destaque */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(90, 62, 122, 0.3);
+}
 
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
+/* Botões com efeito neon lilás */
+.btn {
+  background-color: #CBB4E3;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 6px #a07be0;
+}
+.btn:hover {
+  background-color: #A88ACB;
+  box-shadow: 0 0 15px #b799ff, 0 0 30px #cbb4e3;
+  transform: scale(1.07);
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+/* Animação de entrada das seções */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    h2 {
-      font-size: 1.8em;
-      margin-top: 40px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #5A3E7A;
-    }
-
-    .card {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #3E2C5A;
-    }
-
-    .card p {
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      background-color: #CBB4E3;
-      color: #fff;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background-color: #A88ACB;
-      transform: scale(1.05);
-    }
-
-    footer {
-      background-color: #CBB4E3;
-      text-align: center;
-      padding: 20px;
-      color: #fff;
-      font-size: 0.9em;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .icon {
-      font-size: 1.4em;
-    }
-
-    .evolucao {
-      text-align: center;
-      font-style: italic;
-      margin-top: 40px;
-      color: #6B4B8B;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-      h2 {
-        font-size: 1.4em;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <a href="#sobre">Sobre Mim</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-
-  <header>
-    <h1>Yasmin Monteiro Barreto</h1>
-    <p><strong>Front-End | Fullstack | Back-End</strong></p>
-  </header>
-
-  <section id="sobre">
-    <h2><span class="icon">🧚🏽‍♀️</span> Sobre Mim:</h2>
-    <div class="card">
-      <p>Oie, seja muito bem vindo(a), como vai?                                                                                                                                                                                                              
-      
-      <p>Me chamo Yasmin Monteiro Barreto, tenho 19 anos, e atualmente sou graduanda em sistemas da informação. Sou apaixonada por tecnologia e desenvolvimento de sistemas. Atualmente estou trilhando minha jornada como desenvolvedora, com foco em me tornar uma <strong>programadora Fullstack</strong>.</p>
-      <p>Tenho interesse em construir soluções completas — desde interfaces intuitivas no front-end até estruturas robustas no back-end. Cada projeto que desenvolvo é uma oportunidade de aprender, evoluir e me aproximar do meu objetivo profissional.</p>
-      <p>Busco constantemente aprimorar minhas habilidades em Python, JavaScript, frameworks modernos e boas práticas de desenvolvimento. Acredito que a tecnologia é uma ponte entre ideias e impacto real — e quero fazer parte dessa transformação.</p>
-    </div>
-  </section>
-
-  <section id="projetos">
-    <h2><span class="icon">🐍</span> Conheça meus projetos em Python</h2>
-
-    <div class="card">
-      <h3>Acelerador</h3>
-      <p>Simula o funcionamento de um acelerador de partículas com lógica condicional e estrutura de repetição.</p>
-      <p><strong>Tecnologias:</strong> Python</p>
-      <a href="https://github.com/monteiroy/obi-programas-python/blob/main/Acelerador" target="_blank" class="btn">Ver Código</a>
-    </div>
-
-    <div class="card">
-      <h3>Irmãos</h3>
-      <p>Programa que calcula a diferença de idade entre irmãos e determina quem é mais velho.</p>
-      <p><strong>Tecnologias:</strong> Python</p>
-      <a href="https://github.com/monteiroy/obi-programas-python/blob/main/Irm%C3%A3os" target="_blank" class="btn">Ver Código</a>
-    </div>
-
-    <div class="card">
-      <h3>Tempo de Resposta</h3>
-      <p>Calcula o tempo médio de resposta em um sistema de atendimento com base em dados simulados.</p>
-      <p><strong>Tecnologias:</strong> Python</p>
-      <a href="https://github.com/monteiroy/obi-programas-python/blob/main/Tempo%20de%20Resposta" target="_blank" class="btn">Ver Código</a>
-    </div>
-
-    <div class="card">
-      <h3>Bingo</h3>
-      <p>Simula um jogo de bingo com sorteio aleatório e verificação de cartelas.</p>
-      <p><strong>Tecnologias:</strong> Python</p>
-      <a href="https://github.com/monteiroy/obi-programas-python/blob/main/Bingo" target="_blank" class="btn">Ver Código</a>
-    </div>
-
-    <div class="card">
-      <h3>Camisetas da Olimpíada</h3>
-      <p>Calcula a quantidade de camisetas por categoria para uma olimpíada escolar.</p>
-      <p><strong>Tecnologias:</strong> Python</p>
-      <a href="https://github.com/monteiroy/obi-programas-python/blob/main/Camisetas%20da%20Olimp%C3%ADada" target="_blank" class="btn">Ver Código</a>
-    </div>
-
-    <p style="text-align: center; font-size: 0.9em; color: #5A3E7A; margin-top: 30px;">
-      ⚠️ Programas simples desenvolvidos em Python através da OBI — Olimpíada Brasileira de Informática.
-    </p>
-  </section>
-
-  <section id="contato">
-    <h2><span class="icon">📬</span> Contatos</h2>
-    <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank" class="btn">LinkedIn</a>
-    <a href="mailto:monteiroy48@gmail.com" class="btn">Email</a>
-    <a href="https://github.com/monteiroy" target="_blank" class="btn">GitHub</a>
-  </section>
-
-  <p class="evolucao">🌱 Programadora em desenvolvimento.</p>
-
-  <footer>
-    &copy; 2025 Yasmin Monteiro Barreto. Todos os direitos reservados.
-  </footer>
-</body>
-</html>
+/* Fade do título */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
