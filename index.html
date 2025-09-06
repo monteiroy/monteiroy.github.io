@@ -1,180 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yasmin Monteiro</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #CBA3FF, #A066CC);
-    color: #fff;
-    background-image: url('https://i.imgur.com/1Yc6ZpP.png'); /* florzinhas brancas */
-    background-repeat: repeat;
-    background-size: 100px;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasmin Monteiro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(160, 102, 204, 0.95);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
+    header {
+      background-color: #6200ea;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-  nav button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s;
-  }
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
 
-  nav button:hover {
-    color: #FFD700;
-    transform: scale(1.05);
-  }
+    section {
+      margin-bottom: 40px;
+    }
 
-  section {
-    display: none;
-    padding: 120px 20px;
-    text-align: center;
-    min-height: 100vh;
-  }
+    h2 {
+      color: #6200ea;
+      margin-bottom: 10px;
+    }
 
-  section.active {
-    display: block;
-  }
+    a {
+      color: #6200ea;
+      text-decoration: none;
+    }
 
-  h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  h2 {
-    font-size: 2em;
-    color: #FFD700;
-    margin-bottom: 25px;
-  }
-
-  p, li {
-    font-size: 1.1em;
-    color: #fff;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  ul li {
-    margin-bottom: 10px;
-  }
-
-  a {
-    color: #FFD700;
-    text-decoration: underline;
-    transition: 0.3s;
-  }
-
-  a:hover {
-    color: #fff;
-  }
-
-  .contact-icon {
-    margin-right: 8px;
-  }
-
-  footer {
-    background: rgba(160, 102, 204, 0.95);
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-    font-size: 0.9em;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
-  }
-</style>
+    footer {
+      background-color: #6200ea;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-  <button onclick="showSection('inicio')">Início</button>
-  <button onclick="showSection('sobre')">Sobre Mim</button>
-  <button onclick="showSection('habilidades')">Habilidades</button>
-  <button onclick="showSection('areas')">Áreas</button>
-  <button onclick="showSection('projetos')">Projetos</button>
-  <button onclick="showSection('contato')">Contato</button>
-</nav>
+<header>
+  <h1>Yasmin Monteiro</h1>
+  <p>Estudante de Sistemas da Informação</p>
+</header>
 
-<section id="inicio" class="active">
-  <h1>Olá!</h1>
-  <p>Seja bem-vindo(a) ao meu site!</p>
-</section>
+<main>
+  <section>
+    <h2>Sobre Mim</h2>
+    <p>Olá! Sou Yasmin Monteiro, apaixonada por tecnologia e desenvolvimento web.</p>
+  </section>
 
-<section id="sobre">
-  <h2>Sobre Mim</h2>
-  <p>Sou Yasmin Monteiro, estudante de Sistemas da Informação. Atualmente estou aprendendo HTML e GitHub. Desejo desenvolver projetos completos, combinando design e funcionalidade.</p>
-</section>
+  <section>
+    <h2>Projetos</h2>
+    <ul>
+      <li><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></li>
+      <li><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></li>
+      <li><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></li>
+    </ul>
+  </section>
 
-<section id="habilidades">
-  <h2>Habilidades</h2>
-  <ul>
-    <li>Python</li>
-    <li>HTML (em aprendizado)</li>
-    <li>Git & GitHub</li>
-    <li>Frontend</li>
-    <li>UX/UI Design</li>
-  </ul>
-</section>
-
-<section id="areas">
-  <h2>Áreas de Atuação</h2>
-  <ul>
-    <li>Frontend</li>
-    <li>Backend</li>
-    <li>Fullstack</li>
-    <li>Desenvolvimento Web e APIs</li>
-  </ul>
-</section>
-
-<section id="projetos">
-  <h2>Projetos</h2>
-  <ul>
-    <li><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></li>
-    <li><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></li>
-    <li><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></li>
-  </ul>
-</section>
-
-<section id="contato">
-  <h2>Contato</h2>
-  <ul>
-    <li><span class="contact-icon">🔗</span><a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank">LinkedIn</a></li>
-    <li><span class="contact-icon">📧</span><a href="mailto:monteiroy48@gmail.com">Email</a></li>
-    <li><span class="contact-icon">💻</span><a href="https://github.com/monteiroy" target="_blank">GitHub</a></li>
-  </ul>
-</section>
+  <section>
+    <h2>Contato</h2>
+    <p>Email: <a href="mailto:monteiroy48@gmail.com">monteiroy48@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank">Perfil</a></p>
+    <p>GitHub: <a href="https://github.com/monteiroy" target="_blank">Repositórios</a></p>
+  </section>
+</main>
 
 <footer>
-  &copy; 2025 Yasmin Monteiro. Todos os direitos reservados.
+  &copy; 2025 Yasmin Monteiro
 </footer>
-
-<script>
-function showSection(id) {
-  const sections = document.querySelectorAll('section');
-  sections.forEach(sec => sec.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-</script>
 
 </body>
 </html>
