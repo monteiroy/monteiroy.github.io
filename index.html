@@ -3,121 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yasmin Monteiro - Portfólio</title>
+  <title>Yasmin Monteiro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #D1A6FF, #9B59B6);
-      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      background: #EEDCFF;
+      color: #2E0854;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(178, 102, 255, 0.9);
+      padding: 12px 30px;
+      text-align: right;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #2E0854;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFFFFF;
+    }
+
+    header {
+      padding: 100px 20px 60px;
       text-align: center;
     }
-    header {
-      padding: 50px 20px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    h1 {
+
+    header h1 {
       font-size: 3em;
-      margin: 0;
+      margin-bottom: 10px;
     }
-    p {
+
+    header p {
       font-size: 1.2em;
-      margin: 10px 0;
+      color: #2E0854;
     }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #fff;
-      color: #9B59B6;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
+
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      margin-bottom: 40px;
     }
-    .btn:hover {
-      background-color: #9B59B6;
-      color: #fff;
-    }
-    .section {
-      padding: 40px 20px;
-    }
-    .section h2 {
-      font-size: 2.5em;
+
+    h2 {
+      color: #8a2be2;
+      text-align: center;
       margin-bottom: 20px;
+      font-weight: 500;
     }
-    .cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
     }
-    .card {
-      background-color: #fff;
-      color: #9B59B6;
-      padding: 20px;
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
+
+    ul li {
+      margin-bottom: 8px;
     }
-    .card:hover {
-      transform: translateY(-10px);
+
+    a.link {
+      color: #2E0854;
+      text-decoration: underline;
+      font-weight: 500;
     }
+
     footer {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: #B266FF;
+      text-align: center;
       padding: 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      color: #fff;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="#sobre">Sobre Mim</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#areas">Áreas</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
   <header>
     <h1>Yasmin Monteiro</h1>
     <p>Desenvolvedora Fullstack | Frontend & Backend</p>
-    <a href="#sobre" class="btn">Saiba mais</a>
-    <a href="#projetos" class="btn">Meus projetos</a>
   </header>
 
-  <section id="sobre" class="section">
+  <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Sou estudante de Sistemas da Informação, apaixonada por desenvolvimento web e soluções digitais. Busco criar projetos completos, combinando Frontend e Backend para interfaces modernas e funcionais.</p>
+    <p>Sou estudante de Sistemas da Informação, apaixonada por desenvolvimento web e soluções digitais. Gosto de criar projetos que combinam design delicado e funcionalidade.</p>
   </section>
 
-  <section id="habilidades" class="section">
+  <section id="habilidades">
     <h2>Habilidades</h2>
-    <div class="cards">
-      <div class="card">HTML, CSS, JavaScript</div>
-      <div class="card">React</div>
-      <div class="card">Node.js, Python</div>
-      <div class="card">Git & GitHub</div>
-      <div class="card">APIs REST</div>
-      <div class="card">UX/UI Design</div>
-    </div>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React</li>
+      <li>Node.js, Python</li>
+      <li>Git & GitHub</li>
+      <li>APIs REST</li>
+      <li>UX/UI Design</li>
+    </ul>
   </section>
 
-  <section id="projetos" class="section">
+  <section id="areas">
+    <h2>Áreas de Atuação</h2>
+    <ul>
+      <li>Frontend: Interfaces modernas e delicadas</li>
+      <li>Backend: APIs, lógica e banco de dados</li>
+      <li>Fullstack: Desenvolvimento completo e integrado</li>
+    </ul>
+  </section>
+
+  <section id="projetos">
     <h2>Projetos</h2>
-    <div class="cards">
-      <div class="card"><a href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></div>
-      <div class="card"><a href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></div>
-      <div class="card"><a href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></div>
-    </div>
+    <ul>
+      <li><a class="link" href="https://github.com/monteiroy/projeto1" target="_blank">Projeto 1</a></li>
+      <li><a class="link" href="https://github.com/monteiroy/projeto2" target="_blank">Projeto 2</a></li>
+      <li><a class="link" href="https://github.com/monteiroy/projeto3" target="_blank">Projeto 3</a></li>
+    </ul>
   </section>
 
-  <section id="contato" class="section">
+  <section id="contato">
     <h2>Contato</h2>
-    <a href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank" class="btn">LinkedIn</a>
-    <a href="https://github.com/monteiroy" target="_blank" class="btn">GitHub</a>
-    <a href="mailto:monteiroy48@gmail.com" class="btn">Email</a>
+    <ul>
+      <li><a class="link" href="https://www.linkedin.com/in/yasmin-monteiro-5134702b1/" target="_blank">LinkedIn</a></li>
+      <li><a class="link" href="https://github.com/monteiroy" target="_blank">GitHub</a></li>
+      <li><a class="link" href="mailto:monteiroy48@gmail.com">Email</a></li>
+    </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 Yasmin Monteiro. Todos os direitos reservados.</p>
+    &copy; 2025 Yasmin Monteiro. Todos os direitos reservados.
   </footer>
 
 </body>
